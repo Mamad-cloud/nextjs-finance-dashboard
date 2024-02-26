@@ -70,8 +70,8 @@ export async function fetchCardData() {
       invoiceStatusPromise,
     ]);
 
-    const numberOfInvoices = Number(data[0].rows[0].count ?? '0');
-    const numberOfCustomers = Number(data[1].rows[0].count ?? '0');
+    const numberOfInvoices = Number(data[0].rows[0].count ?? '0').toLocaleString('fa-IR');
+    const numberOfCustomers = Number(data[1].rows[0].count ?? '0').toLocaleString('fa-IR');
     const totalPaidInvoices = formatCurrency(data[2].rows[0].paid ?? '0');
     const totalPendingInvoices = formatCurrency(data[2].rows[0].pending ?? '0');
 
